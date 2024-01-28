@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  fastfetch-musl:
+    container_name: fastfetch-musl
+    image: fastfetch-musl
+    build:
+      context: .
+      dockerfile: dockerfile-musl
+    working_dir: "/fastfetch"
+    command: sh ./run.sh
+    user: 1000:1000
+    volumes:
+      - ./:/fastfetch

@@ -1,0 +1,87 @@
+FROM alpine:3.19
+
+RUN apk -U upgrade
+
+### Build packages
+RUN apk add alpine-sdk cmake
+
+### Dev Libraries
+RUN apk add pciutils-dev        \
+            vulkan-loader-dev   \
+            libx11-dev          \
+            wayland-dev         \
+            libdrm-dev          \
+            glib-dev            \
+            dconf-dev           \
+            imagemagick-dev     \
+            chafa-dev           \
+            zlib-dev            \
+            dbus-dev            \
+            mesa-dev            \
+            opencl-dev          \
+            xfconf-dev          \
+            sqlite-dev          \
+            rpm-dev             \
+            networkmanager-dev  \
+            pulseaudio-dev      \
+            ddcutil-dev
+
+# libpci
+# apk package: pciutils-dev
+
+# libvulkan
+# apk package: vulkan-loader-dev
+
+# libx11
+# apk package: libx11-dev
+
+# libwayland-client
+# apk package: wayland-dev
+
+# libdrm
+# apk package: libdrm-dev
+
+# libgio
+# apk package: glib-dev
+
+# libdconf
+# apk package: dconf-dev
+
+# libmagickcore
+# apk package: imagemagick-dev
+
+# libchafa
+# apk package: chafa-dev
+
+# libz
+# apk package: zlib-dev
+
+# libdbus
+# apk package: dbus-dev
+
+# libegl
+# apk package: mesa-dev
+
+# libopencl
+# apk package: opencl-dev
+
+# libxfconf
+# apk package: xfconf-dev
+
+# libsqlite3
+# apk package: sqlite-dev
+
+# librpm
+# apk package: rpm-dev
+
+# libnm
+# apk package: networkmanager-dev
+
+# libpulse
+# apk package: pulseaudio-dev
+
+# ddcutil
+# apk package: ddcutil-dev
+
+# directx-headers
+# apk: package: NOT FOUND
